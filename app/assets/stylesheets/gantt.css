@@ -1,0 +1,43 @@
+.gantt {
+    width: 600px;
+    border: 1px solid #7C7A88;
+    background: #B6B7B8;
+    padding: 4px;
+}
+.barWrap {
+    margin: 3px;
+    height: 30px;
+    position: relative;
+}
+.bar {
+    height: 30px;
+    width: 0px;
+}
+.bar .actual {
+    float: left;
+    position: relative;
+    height: 30px;
+    background: #009999;
+}
+.bar .expected {
+    float: left;
+    height: 30px;
+    background: #9E9D9C;
+}
+.bar.paleblue {
+    background: #5CCCCC;
+}
+.ui-sortable-placeholder {
+    height: 30px !important;
+}
+
+.dayHeaderContainer {
+    width: 600px;
+    height: 30px;
+    padding: 4px;
+}
+.dayHeader {
+    float: left;
+    width: 120px;
+    text-align: center;  
+}
