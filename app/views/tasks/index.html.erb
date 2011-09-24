@@ -16,7 +16,7 @@
 <% @tasks.each do |task| %>
   <tr>
     <td><%= task.name %></td>
-    <td><%= task.user_id %></td>
+    <td><%= task.user.username %></td>
     <td><%= task.assigned_date %></td>
     <td><%= task.opened_date %></td>
     <td><%= task.expectation_date %></td>
