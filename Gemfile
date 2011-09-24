@@ -37,5 +37,6 @@ end
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "mocha", :group => :test
 
+gem "therubyracer"
 
 gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git', :group => :development
