@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  user_id: 1
+  assigned_date: 2011-09-24 14:11:57
+  opened_date: 2011-09-24 14:11:57
+  expectation_date: 2011-09-24 14:11:57
+  closed_date: 2011-09-24 14:11:57
+
+two:
+  name: MyString
+  user_id: 1
+  assigned_date: 2011-09-24 14:11:57
+  opened_date: 2011-09-24 14:11:57
+  expectation_date: 2011-09-24 14:11:57
+  closed_date: 2011-09-24 14:11:57
