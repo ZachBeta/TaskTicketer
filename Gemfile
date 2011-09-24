@@ -14,7 +14,7 @@ gem "nifty-generators", :group => :development
 # in production environments by default.
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+#  gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end
 
@@ -33,3 +33,9 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+gem "bcrypt-ruby", :require => "bcrypt"
+gem "mocha", :group => :test
+
+
+gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git', :group => :development
