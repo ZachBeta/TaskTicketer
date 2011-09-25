@@ -127,7 +127,6 @@ $(function() {
         actualCss = 'width:' + task.actual_duration + 'px;left:' + task.actual_offset + 'px';
         
         taskHtml = '<div class="barWrap"><div id="bar_' + i + '" class="bar" style="' + barCss + '"><div class="expected" style="' + expectedCss + '"><div class="actual" style="' + actualCss + '"</div></div></div></div>';
-        //alert(taskHtml);
         $div.append(taskHtml);
     }
     /*
@@ -146,14 +145,15 @@ $(function() {
     
     var realTaskLength = real_tasks.length,
         diffDate,
-        real_task2,
+        real_task,
         j;
     
     for (j = 0; j < realTaskLength; j++) {
-        var real_task = {};
+        //var real_task = {};
         real_task = real_tasks[j];
         
         alert(real_task.name + ' : ' + real_task.closed_date + ' - ' + real_task.assigned_date);
+        
         real_task.assigned_date = UTIL.cleanDate(real_task.assigned_date);
         real_task.expectation_date = UTIL.cleanDate(real_task.expectation_date);
         real_task.opened_date = UTIL.cleanDate(real_task.opened_date);
@@ -161,8 +161,8 @@ $(function() {
         
         if (real_task.closed_date) {
             //alert(real_task.closed_date + ' - ' + real_task.assigned_date);
-        
-            alert('This task took ' + ((new Date(real_task.closed_date).getTime(), new Date(real_task.assigned_date).getTime() / 1000) * 60 * 60) + ' hours to complete from assignment.');
+            alert(new Date(real_task.closed_date));
+            //alert('This task took ' + (parseInt(new Date(real_task.closed_date).getTime() - new Date(real_task.assigned_date).getTime()) / 1000 * 60 * 60) + ' hours to complete from assignment.');
         }
     }
 });
