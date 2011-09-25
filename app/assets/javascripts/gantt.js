@@ -163,8 +163,8 @@ $(function() {
         grid: [ 20, 0 ]
     });
     */
-    $('.gantt').disableSelection();
-
+  /*  $('.gantt').disableSelection();
+*/
     for (i = 0; i < 5; i++) {
         dayHeaderHtml += '<div class="dayHeader">' + current_day.addDays(1).getDayName() + '</div>';
     }
