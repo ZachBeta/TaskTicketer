@@ -3,7 +3,9 @@
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "TaskTicketer" %></title>
     <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "gantt" %>
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "gantt" %>
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
