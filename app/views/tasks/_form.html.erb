@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :expectation_date %><br />
-    <%= f.datetime_select :expectation_date %>
+    <%= f.datetime_select :expectation_date, :default => 3.days.from_now %>
   </div>
   <div class="field">
     <%= f.label :closed_date %><br />

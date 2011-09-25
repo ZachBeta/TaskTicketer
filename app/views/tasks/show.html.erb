@@ -12,22 +12,22 @@
 
 <p>
   <b>Assigned date:</b>
-  <%= @task.assigned_date %>
+  <%= @task.assigned_date.to_formatted_s(:long) %>
 </p>
 
 <p>
   <b>Opened date:</b>
-  <%= @task.opened_date %>
+  <%= @task.opened_date.to_formatted_s(:long) %>
 </p>
 
 <p>
   <b>Expectation date:</b>
-  <%= @task.expectation_date %>
+  <%= @task.expectation_date.to_formatted_s(:long) %>
 </p>
 
 <p>
   <b>Closed date:</b>
-  <%= @task.closed_date %>
+  <%= @task.closed_date.to_formatted_s(:long) %>
 </p>
 
 
