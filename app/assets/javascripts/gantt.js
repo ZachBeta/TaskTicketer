@@ -1,14 +1,4 @@
-<html>
-<head>
-<title>Test</title>
 
-<link type="text/css" rel="stylesheet" href="test.css" />
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-<script type="text/javascript" src="date.js"></script>
-
-<script type="text/javascript">
 var UTIL = {
     /* expected input: '2011-09-24T19:08:44Z' */
     cleanDate : function(dirtyDate) {
@@ -292,10 +282,3 @@ var sorted=$(all_tasks).sort(sortLastNameDesc);
     });
 
 });
-    </script>
-</head>
-<body>
-<div class="dayHeaderContainer"></div>
-<div class="gantt"></div>
-</body>
-</html>
