@@ -1,5 +1,17 @@
 <h1>Listing tasks</h1>
 
+<br />
+
+<div class="dayHeaderContainer">
+    <div class="dayHeader">Monday</div>
+    <div class="dayHeader">Tuesday</div>
+    <div class="dayHeader">Wednesday</div>
+    <div class="dayHeader">Thursday</div>
+    <div class="dayHeader">Friday</div>
+</div>
+<div class="gantt"></div>
+
+
 <table>
   <tr>
     <th>Name</th>
@@ -28,15 +40,6 @@
 <% end %>
 </table>
 
-<br />
 
-<div class="dayHeaderContainer">
-    <div class="dayHeader">Monday</div>
-    <div class="dayHeader">Tuesday</div>
-    <div class="dayHeader">Wednesday</div>
-    <div class="dayHeader">Thursday</div>
-    <div class="dayHeader">Friday</div>
-</div>
-<div class="gantt"></div>
 
 <%= link_to 'New Task', new_task_path %>
