@@ -38,7 +38,7 @@ class TasksController < ApplicationController
   # GET /tasks/1/edit
   def edit
     if current_user
-        @task = current_user.tasks.find(params[:id])
+        @task = Tasks.find(params[:id])
     else
       redirect_to tasks_path, notice: 'Please Log In First.'
     end
@@ -68,7 +68,7 @@ class TasksController < ApplicationController
   # PUT /tasks/1.json
   def update
     if current_user
-      @task = current_user.tasks.find(params[:id])
+      @task = Tasks.find(params[:id])
       respond_to do |format|
         if @task.update_attributes(params[:task])
           format.html { redirect_to @task, notice: 'Task was successfully updated.' }
@@ -87,7 +87,7 @@ class TasksController < ApplicationController
   # DELETE /tasks/1.json
   def destroy
     if current_user
-      @task = current_user.tasks.find(params[:id])
+      @task = Tasks.find(params[:id])
       @task.destroy
   
       respond_to do |format|
