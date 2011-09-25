@@ -11,11 +11,14 @@
 }
 .bar {
     height: 30px;
-    width: 0px;
+}
+.bar .assign {
+    float: left;
+    height: 30px;
+    background: #CCCCCC;
 }
 .bar .actual {
     float: left;
-    position: relative;
     height: 30px;
     background: #009999;
 }
@@ -39,5 +42,5 @@
 .dayHeader {
     float: left;
     width: 120px;
-    text-align: center;  
+    text-align: center;
 }
