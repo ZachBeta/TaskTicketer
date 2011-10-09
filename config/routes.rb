@@ -1,6 +1,8 @@
 TaskTicketer::Application.routes.draw do
   
-  resources :tasks
+  resources :tasks do
+    resources :comments    
+  end
   
   get 'tasks/:id/open' => 'tasks#open', :as => :open_task
 

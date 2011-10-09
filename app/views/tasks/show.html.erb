@@ -12,24 +12,63 @@
 
 <p>
   <b>Assigned date:</b>
-  <%= @task.assigned_date.to_formatted_s(:long) %>
+  <% if(@task.assigned_date) %>
+  	<%= @task.assigned_date.to_formatted_s(:long) %>
+  <% end %>
 </p>
 
 <p>
   <b>Opened date:</b>
-  <%= @task.opened_date.to_formatted_s(:long) %>
+  <% if(@task.opened_date) %>
+  	<%= @task.opened_date.to_formatted_s(:long) %>
+  <% end %>
 </p>
 
 <p>
   <b>Expectation date:</b>
-  <%= @task.expectation_date.to_formatted_s(:long) %>
+  <% if(@task.expectation_date) %>
+  	<%= @task.expectation_date.to_formatted_s(:long) %>
+  <% end %>
 </p>
 
 <p>
   <b>Closed date:</b>
-  <%= @task.closed_date.to_formatted_s(:long) %>
+  <% if(@task.closed_date) %>
+  	<%= @task.closed_date.to_formatted_s(:long) %>
+  <% end %>
 </p>
 
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Edit', edit_task_path(@task) %> 
+
+
+<h1>Listing comments</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Task</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @task.comments.each do |comment| %>
+  <tr>
+    <td><%= comment.content %></td>
+    <td><%= comment.task_id %></td>
+    <td><%= link_to 'Show', comment %></td>
+    <td><%= link_to 'Edit', edit_task_comment_path(comment) %></td>
+    <td><%= link_to 'Destroy', comment, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Comment', new_task_comment_path(@task.id) %>
+
+
+
+
 <%= link_to 'Back', tasks_path %>
