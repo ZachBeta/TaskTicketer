@@ -6,7 +6,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @tasks }
+      format.json { render json: @task.to_json(:include => {:user => {:only => [:username, :email]}}) }
     end
   end
 
@@ -49,7 +49,7 @@ class TasksController < ApplicationController
   def create
     if current_user
       @task = current_user.tasks.new(params[:task])
-      @task.update_attributes(:assigned_date => Time.now, :opened_date => Time.now, :expectation_date => Time.now + 1.day, :closed_date => Time.now + 2.days)
+      @task.update_attributes(:assigned_date => Time.now, :opened_date => nil, :expectation_date => Time.now + 1.day, :closed_date => nil)
       respond_to do |format|
         if @task.save
           format.html { redirect_to tasks_path, notice: 'Task was successfully created.' }
