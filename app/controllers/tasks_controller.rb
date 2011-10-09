@@ -98,4 +98,18 @@ class TasksController < ApplicationController
       redirect_to tasks_path, notice: 'Please Log In First.'
     end
   end
+  
+  def open
+    if current_user
+      @task = Task.find(params[:id])
+      @task.update_attributes(:opened_date => Time.now)
+ 
+      respond_to do |format|
+        format.html { redirect_to tasks_url }
+        format.json { head :ok }
+      end
+    else
+      redirect_to tasks_path, notice: 'Please Log In First.'
+    end
+  end
 end

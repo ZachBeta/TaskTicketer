@@ -1,6 +1,8 @@
 TaskTicketer::Application.routes.draw do
   
   resources :tasks
+  
+  get 'tasks/:id/open' => 'tasks#open', :as => :open_task
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 
